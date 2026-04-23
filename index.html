@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SKA Arcadia – Signature High Street | Wave City NH-24</title>
+  <link rel="icon" type="image/webp" href="assets/logo.webp"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-lg fixed-top ska-nav navbar-dark" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+      <img src="assets/logo.webp" alt="SKA Arcadia" style="max-height: 65px;"/>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-center gap-2">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#location">Location</a></li>
+        <li class="nav-item"><a class="nav-link" href="#offerings">Offerings</a></li>
+        <li class="nav-item"><a class="nav-link" href="#brands">Brands</a></li>
+        <li class="nav-item"><a class="nav-link" href="#amenities">Amenities</a></li>
+        <li class="nav-item"><a class="nav-link" href="#why">Why Invest</a></li>
+        <li class="nav-item ms-2">
+          <button class="btn btn-gold px-4" data-bs-toggle="modal" data-bs-target="#enquiryModal">Book Now</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO SECTION ===== -->
+<section class="hero-section" id="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="container">
+      <div class="row align-items-center min-vh-100">
+        <div class="col-lg-7 hero-text" data-aos="fade-right">
+          <div class="hero-badge mb-3"><i class="fa-solid fa-star me-2"></i>RERA Approved | Ready to Move</div>
+          <h1 class="hero-title">SKA <span class="gold-text">Arcadia</span></h1>
+          <h2 class="hero-subtitle">The Signature High Street<br/>of Wave City</h2>
+          <p class="hero-desc mt-3" style="background: rgba(201,168,76,0.15); border: 1px solid rgba(201,168,76,0.4); padding: 12px 18px; border-radius: 8px; color: #fff; font-weight: 500;">Prime commercial retail spaces on NH-24, Ghaziabad. Shops starting from <strong class="gold-text" style="font-size: 1.1em;">₹69 Lakhs*</strong> with 5 Lakh+ catchment residents.</p>
+          <div class="hero-highlights mt-4 d-flex flex-wrap gap-3">
+            <div class="h-chip"><i class="fa-solid fa-map-pin me-1"></i>Wave City, Sector 2</div>
+            <div class="h-chip"><i class="fa-solid fa-road me-1"></i>NH-24 Frontage</div>
+            <div class="h-chip"><i class="fa-solid fa-train-subway me-1"></i>5 Min Metro</div>
+            <div class="h-chip"><i class="fa-solid fa-key me-1"></i>Registry Open</div>
+          </div>
+          <div class="hero-cta mt-5 d-flex flex-wrap gap-3">
+            <button class="btn btn-gold btn-lg px-5 py-3" data-bs-toggle="modal" data-bs-target="#enquiryModal">
+              <i class="fa-solid fa-phone-volume me-2"></i>Get Free Callback
+            </button>
+            <a href="#about" class="btn btn-outline-light btn-lg px-5 py-3">
+              <i class="fa-solid fa-circle-info me-2"></i>Explore Project
+            </a>
+          </div>
+          <div class="hero-price-tag mt-5">
+            <div class="price-label">Starting From</div>
+            <div class="price-val">₹69 Lakhs<sup>*</sup></div>
+            <div class="price-plan">Easy 40:60 Payment Plan | 3 Years Free Maintenance</div>
+          </div>
+        </div>
+        <div class="col-lg-5 d-none d-lg-flex justify-content-center">
+          <div class="hero-card w-100" data-aos="fade-left" data-aos-delay="300">
+            <div class="hero-card-body p-4">
+              <h4 class="mb-4 text-center text-white" style="font-family: var(--font-heading);">Enquire Now</h4>
+              <form id="heroForm">
+                <div class="mb-3 text-start">
+                  <label class="form-label text-white-50 small mb-1">Full Name *</label>
+                  <input type="text" class="form-control" placeholder="Enter your full name" required/>
+                </div>
+                <div class="mb-3 text-start">
+                  <label class="form-label text-white-50 small mb-1">Mobile Number *</label>
+                  <input type="tel" class="form-control" placeholder="" required/>
+                </div>
+                <div class="mb-3 text-start">
+                  <label class="form-label text-white-50 small mb-1">City *</label>
+                  <input type="text" class="form-control" placeholder="Enter your city" required/>
+                </div>
+                <div class="mb-4 text-start">
+                  <label class="form-label text-white-50 small mb-1">Interested In *</label>
+                  <select class="form-control" required style="appearance: auto;">
+                    <option value="" disabled selected style="color: #000;">Select apartment type</option>
+                    <option value="Ground Floor" style="color: #000;">Ground Floor – Double Height Shop</option>
+                    <option value="LGF" style="color: #000;">Lower Ground Floor – Retail</option>
+                    <option value="1st Floor" style="color: #000;">1st Floor – Retail/F&B</option>
+                    <option value="2nd Floor" style="color: #000;">2nd Floor – Dining/Banquet</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-gold w-100 py-3">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll-indicator">
+    <div class="scroll-dot"></div>
+    <span>Scroll to Explore</span>
+  </div>
+</section>
+
+<!-- ===== STATS BAR ===== -->
+<section class="stats-bar py-4">
+  <div class="container">
+    <div class="row g-0 text-center">
+      <div class="col-6 col-md-3 stat-item">
+        <div class="stat-num">5L+</div>
+        <div class="stat-label">Catchment Residents</div>
+      </div>
+      <div class="col-6 col-md-3 stat-item">
+        <div class="stat-num">722</div>
+        <div class="stat-label">Total Units</div>
+      </div>
+      <div class="col-6 col-md-3 stat-item">
+        <div class="stat-num">2 Acres</div>
+        <div class="stat-label">Project Area</div>
+      </div>
+      <div class="col-6 col-md-3 stat-item">
+        <div class="stat-num">15+</div>
+        <div class="stat-label">Brands Coming</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT SECTION ===== -->
+<section class="about-section section-pad" id="about">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <div class="img-mosaic">
+          <img src="assets/gallery-1.webp" alt="High Street" class="mosaic-main"/>
+          <img src="assets/gallery-2.webp" alt="Shopping" class="mosaic-sm mosaic-sm-1"/>
+          <img src="assets/gallery-10.webp" alt="Retail" class="mosaic-sm mosaic-sm-2"/>
+          <div class="mosaic-badge"><i class="fa-solid fa-award"></i><span>Trusted<br>SKA Group</span></div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="section-tag">About The Project</div>
+        <h2 class="section-title">Ghaziabad's Most <span class="gold-text">Premium</span> High Street Destination</h2>
+        <p class="section-body">SKA Arcadia is a high-end Retail Street located in Wave City, NH-24 — India's first Pre-certified Platinum-rated Green Township. This futuristic commercial hub offers double-height shops, fine dining, anchor stores and lifestyle retail all under one prestigious address.</p>
+        <p class="section-body">Developed by the <strong>SKA Group</strong>, one of Delhi-NCR's most trusted real estate developers, Arcadia is designed to become Ghaziabad's retail landmark — combining futuristic architecture with unmatched connectivity on NH-24.</p>
+        <div class="about-features mt-4">
+          <div class="af-item"><i class="fa-solid fa-check-circle"></i><span>3-Sided Open Corner Plot</span></div>
+          <div class="af-item"><i class="fa-solid fa-check-circle"></i><span>150 & 40 Mtr. Front-facing Main Road</span></div>
+          <div class="af-item"><i class="fa-solid fa-check-circle"></i><span>Futuristic Architecture & Design</span></div>
+          <div class="af-item"><i class="fa-solid fa-check-circle"></i><span>Vastu-compliant Commercial Spaces</span></div>
+          <div class="af-item"><i class="fa-solid fa-check-circle"></i><span>RERA Approved: UPRERAPRJ228610</span></div>
+          <div class="af-item"><i class="fa-solid fa-check-circle"></i><span>Ready to Move | Registry Open</span></div>
+        </div>
+        <button class="btn btn-gold mt-4 px-4 py-2" data-bs-toggle="modal" data-bs-target="#enquiryModal">Download Brochure</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LOCATION SECTION ===== -->
+<section class="location-section section-pad" id="location">
+  <div class="location-bg-overlay"></div>
+  <div class="container position-relative">
+    <div class="text-center mb-5">
+      <div class="section-tag mx-auto">Prime Location</div>
+      <h2 class="section-title">Unmatched <span class="gold-text">Connectivity</span></h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="loc-card">
+          <div class="loc-icon"><i class="fa-solid fa-road"></i></div>
+          <h5>NH-24 Frontage</h5>
+          <p>Walking distance from NH-24 — 14-lane expressway with massive daily traffic and visibility</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="loc-card">
+          <div class="loc-icon"><i class="fa-solid fa-train-subway"></i></div>
+          <h5>5 Mins Metro</h5>
+          <p>5 minutes from the proposed Metro Station, ensuring massive footfall from transit commuters</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="loc-card">
+          <div class="loc-icon"><i class="fa-solid fa-city"></i></div>
+          <h5>20 Mins Noida Sec-62</h5>
+          <p>Perfectly accessible from Noida's prime business district via the 14-lane NH-24 highway</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="loc-card">
+          <div class="loc-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+          <h5>20 Mins Delhi</h5>
+          <p>Seamlessly connected to Delhi via NH-24, positioning Arcadia in the heart of NCR's growth corridor</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="loc-card featured-loc-card">
+          <img src="assets/site-plan-banner.webp" alt="Location" class="loc-card-img"/>
+          <div class="loc-card-overlay">
+            <h4>Wave City, Sector 2<br/>Ghaziabad, UP</h4>
+            <a href="https://maps.google.com" target="_blank" class="btn btn-gold btn-sm mt-2"><i class="fa-solid fa-map-pin me-1"></i>View on Map</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="loc-card">
+          <div class="loc-icon"><i class="fa-solid fa-route"></i></div>
+          <h5>Eastern Peripheral</h5>
+          <p>10 minutes from Eastern Peripheral Expressway, connecting to Greater Noida and Faridabad</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== OFFERINGS SECTION ===== -->
+<section class="offerings-section section-pad" id="offerings">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="section-tag mx-auto">Floor Plan & Offerings</div>
+      <h2 class="section-title">Choose Your <span class="gold-text">Space</span></h2>
+      <p class="section-desc">Retail spaces across multiple floors with double-height options on the ground floor</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="floor-card">
+          <div class="floor-tag">LGF</div>
+          <div class="floor-icon"><i class="fa-solid fa-store"></i></div>
+          <h5>Lower Ground Floor</h5>
+          <p>Ideal for anchor stores, supermarkets, and high-traffic retail outlets</p>
+          <div class="floor-price">₹69L+</div>
+          <button class="btn btn-outline-gold btn-sm w-100 mt-3" data-bs-toggle="modal" data-bs-target="#enquiryModal">Know More</button>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="floor-card floor-featured">
+          <div class="floor-tag tag-gold">Ground Floor</div>
+          <div class="floor-icon"><i class="fa-solid fa-store-slash"></i></div>
+          <h5>Double-Height Shops</h5>
+          <p>Signature double-height shops with breathtaking visual appeal and premium street frontage</p>
+          <div class="floor-price">₹75L+</div>
+          <button class="btn btn-gold btn-sm w-100 mt-3" data-bs-toggle="modal" data-bs-target="#enquiryModal">Best Seller</button>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="floor-card">
+          <div class="floor-tag">1st Floor</div>
+          <div class="floor-icon"><i class="fa-solid fa-utensils"></i></div>
+          <h5>First Floor</h5>
+          <p>Premium retail and F&B spaces with great visibility and escalator connectivity</p>
+          <div class="floor-price">₹65L+</div>
+          <button class="btn btn-outline-gold btn-sm w-100 mt-3" data-bs-toggle="modal" data-bs-target="#enquiryModal">Know More</button>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="floor-card">
+          <div class="floor-tag">2nd Floor</div>
+          <div class="floor-icon"><i class="fa-solid fa-fork-knife"></i></div>
+          <h5>Second Floor</h5>
+          <p>Restaurants, banquets, entertainment — the lifestyle and dining hub of Arcadia</p>
+          <div class="floor-price">₹60L+</div>
+          <button class="btn btn-outline-gold btn-sm w-100 mt-3" data-bs-toggle="modal" data-bs-target="#enquiryModal">Know More</button>
+        </div>
+      </div>
+    </div>
+    <!-- Payment Plan -->
+    <div class="payment-plan-box mt-5">
+      <div class="row align-items-center text-center g-3">
+        <div class="col-md-4">
+          <div class="pp-item"><i class="fa-solid fa-credit-card"></i><div class="pp-label">Easy Payment Plan</div><div class="pp-val">40:60</div></div>
+        </div>
+        <div class="col-md-4">
+          <div class="pp-item pp-mid"><i class="fa-solid fa-screwdriver-wrench"></i><div class="pp-label">Free Maintenance</div><div class="pp-val">3 Years</div></div>
+        </div>
+        <div class="col-md-4">
+          <div class="pp-item"><i class="fa-solid fa-key"></i><div class="pp-label">Possession Status</div><div class="pp-val">Ready to Move</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BRANDS SECTION ===== -->
+<section class="brands-section section-pad" id="brands">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="section-tag mx-auto">Coming Soon</div>
+      <h2 class="section-title">Big <span class="gold-text">Brands</span> at Your Doorstep</h2>
+      <p class="section-desc">World-class F&B and retail brands are already lining up to open at SKA Arcadia</p>
+    </div>
+    <div class="brands-grid">
+      <div class="brand-pill"><i class="fa-solid fa-burger me-2"></i>Haldiram's</div>
+      <div class="brand-pill"><i class="fa-solid fa-pizza-slice me-2"></i>Domino's</div>
+      <div class="brand-pill"><i class="fa-solid fa-bowl-food me-2"></i>Berco's</div>
+      <div class="brand-pill"><i class="fa-solid fa-egg me-2"></i>Wow! Momo</div>
+      <div class="brand-pill"><i class="fa-solid fa-bowl-rice me-2"></i>Wow! China</div>
+      <div class="brand-pill"><i class="fa-solid fa-pot-food me-2"></i>Biryani Blues</div>
+      <div class="brand-pill"><i class="fa-solid fa-fire-burner me-2"></i>BBQ Company</div>
+      <div class="brand-pill"><i class="fa-solid fa-ice-cream me-2"></i>Keventers</div>
+      <div class="brand-pill"><i class="fa-solid fa-cookie me-2"></i>Belgian Waffle</div>
+      <div class="brand-pill brand-more"><i class="fa-solid fa-plus me-2"></i>& Many More</div>
+    </div>
+    <div class="brands-visual mt-5 row g-4 align-items-center">
+      <div class="col-md-6">
+        <img src="assets/gallery-7.webp" alt="Food Court" class="brand-img rounded-4"/>
+      </div>
+      <div class="col-md-6">
+        <img src="assets/gallery-8.webp" alt="Restaurant" class="brand-img rounded-4"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AMENITIES SECTION ===== -->
+<section class="amenities-section section-pad" id="amenities">
+  <div class="amenities-bg"></div>
+  <div class="container position-relative">
+    <div class="text-center mb-5">
+      <div class="section-tag mx-auto">World-Class</div>
+      <h2 class="section-title">Premium <span class="gold-text">Amenities</span></h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="amenity-card">
+          <img src="assets/amenities/Elevator and Escalator1.webp" alt="Escalators" class="amenity-img"/>
+          <div class="amenity-body">
+            <div class="amenity-icon"><i class="fa-solid fa-elevator"></i></div>
+            <h5>Escalators & High-Speed Lifts</h5>
+            <p>Imported marble interiors with state-of-the-art escalators and high-speed lifts across all floors</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="amenity-card">
+          <img src="assets/amenities/photo-1506521781263-d8422e82f27a.jfif" alt="Smart Parking" class="amenity-img"/>
+          <div class="amenity-body">
+            <div class="amenity-icon"><i class="fa-solid fa-square-parking"></i></div>
+            <h5>Smart Parking</h5>
+            <p>Multi-level automated smart parking system designed for maximum convenience of customers and owners</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="amenity-card">
+          <img src="assets/amenities/3.jfif" alt="24x7 Security" class="amenity-img"/>
+          <div class="amenity-body">
+            <div class="amenity-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h5>24×7 Security</h5>
+            <p>Round-the-clock CCTV surveillance, trained security personnel, and advanced access control systems</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="amenity-card">
+          <img src="assets/amenities/4.jfif" alt="Power Backup" class="amenity-img"/>
+          <div class="amenity-body">
+            <div class="amenity-icon"><i class="fa-solid fa-bolt"></i></div>
+            <h5>100% Power Backup</h5>
+            <p>Uninterrupted power supply with full backup ensuring your business never faces downtime</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="amenity-card">
+          <img src="assets/amenities/5.jfif" alt="Fiber" class="amenity-img"/>
+          <div class="amenity-body">
+            <div class="amenity-icon"><i class="fa-solid fa-wifi"></i></div>
+            <h5>Fiber Connectivity</h5>
+            <p>High-speed fiber internet connectivity and smart metering across the entire commercial complex</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="amenity-card">
+          <img src="assets/amenities/6.jfif" alt="Fine Dining" class="amenity-img"/>
+          <div class="amenity-body">
+            <div class="amenity-icon"><i class="fa-solid fa-champagne-glasses"></i></div>
+            <h5>Fine Dining Spaces</h5>
+            <p>Exclusive restaurant and fine dining zones on upper floors offering an upscale culinary experience</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY INVEST SECTION ===== -->
+<section class="why-section section-pad" id="why">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <div class="section-tag">Why Choose Us</div>
+        <h2 class="section-title">Why Invest in<br/><span class="gold-text">SKA Arcadia?</span></h2>
+        <div class="why-list mt-4">
+          <div class="why-item">
+            <div class="why-num">01</div>
+            <div class="why-content">
+              <h5>Premium High-Street Retail Concept</h5>
+              <p>India's signature high-street format on NH-24 — maximum visibility, premium branding opportunities, and massive foot traffic from 5 lakh+ residents.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-num">02</div>
+            <div class="why-content">
+              <h5>Strategic Investment Location</h5>
+              <p>Between Wave City & Aditya World City — one of the fastest-growing commercial corridors in the entire NCR region.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-num">03</div>
+            <div class="why-content">
+              <h5>Trusted Developer – SKA Group</h5>
+              <p>Decades of excellence in Delhi-NCR real estate with a proven track record of delivering on-time, quality projects.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-num">04</div>
+            <div class="why-content">
+              <h5>High ROI Potential</h5>
+              <p>Expected monthly rental income post-possession of ₹36,000+ with high appreciation in NH-24's fast-growing corridor.</p>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-gold mt-4 px-5 py-3" data-bs-toggle="modal" data-bs-target="#enquiryModal">
+          <i class="fa-solid fa-handshake me-2"></i>Book Your Unit Now
+        </button>
+      </div>
+      <div class="col-lg-6">
+        <div class="invest-img-box">
+          <img src="assets/gallery-4.webp" alt="Investment" class="invest-img"/>
+          <div class="invest-overlay-card">
+            <div class="ioc-row"><i class="fa-solid fa-users"></i><span>5 Lakh+ Catchment Residents</span></div>
+            <div class="ioc-row"><i class="fa-solid fa-chart-line"></i><span>High ROI Growth Zone</span></div>
+            <div class="ioc-row"><i class="fa-solid fa-certificate"></i><span>Platinum Green Township</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY SECTION ===== -->
+<section class="gallery-section section-pad">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="section-tag mx-auto">Visual Tour</div>
+      <h2 class="section-title">Experience <span class="gold-text">Arcadia</span></h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="g-item g-tall">
+        <img src="assets/gallery-1.webp" alt="Mall Interior"/>
+        <div class="g-overlay"><span>Premium Interiors</span></div>
+      </div>
+      <div class="g-item">
+        <img src="assets/gallery-5.webp" alt="High Street"/>
+        <div class="g-overlay"><span>High Street</span></div>
+      </div>
+      <div class="g-item">
+        <img src="assets/gallery-10.webp" alt="Retail"/>
+        <div class="g-overlay"><span>Retail Spaces</span></div>
+      </div>
+      <div class="g-item g-wide">
+        <img src="assets/gallery-8.webp" alt="Food Court"/>
+        <div class="g-overlay"><span>Food & Dining</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BAND ===== -->
+<section class="cta-band">
+  <div class="cta-band-bg"></div>
+  <div class="container position-relative text-center py-5">
+    <h2 class="cta-title">Limited Units — <span class="gold-text">Act Now!</span></h2>
+    <p class="cta-desc">Secure your commercial space in Ghaziabad's fastest-growing retail destination today</p>
+    <div class="d-flex justify-content-center flex-wrap gap-3 mt-4">
+      <button class="btn btn-gold btn-lg px-5 py-3" data-bs-toggle="modal" data-bs-target="#enquiryModal">
+        <i class="fa-solid fa-building me-2"></i>Book Your Shop
+      </button>
+      <a href="tel:+919999999999" class="btn btn-outline-light btn-lg px-5 py-3">
+        <i class="fa-solid fa-phone me-2"></i>Call Now
+      </a>
+    </div>
+    <div class="cta-note mt-3">*Registry Open | RERA: UPRERAPRJ228610 | 40:60 Payment Plan</div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="ska-footer">
+  <div class="container py-5">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="mb-3">
+          <img src="assets/logo.webp" alt="SKA Arcadia" style="max-height: 70px;"/>
+        </div>
+        <p class="footer-desc">The premium high-street destination of Ghaziabad, located in Wave City on NH-24. A place where businesses thrive and investments multiply.</p>
+        <div class="rera-badge mt-3">RERA: UPRERAPRJ228610</div>
+      </div>
+      <div class="col-lg-2 col-md-4">
+        <h6 class="footer-heading">Quick Links</h6>
+        <ul class="footer-links">
+          <li><a href="#about">About Project</a></li>
+          <li><a href="#location">Location</a></li>
+          <li><a href="#offerings">Floor Plans</a></li>
+          <li><a href="#brands">Brands</a></li>
+          <li><a href="#amenities">Amenities</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <h6 class="footer-heading">Project Details</h6>
+        <ul class="footer-links">
+          <li><i class="fa-solid fa-location-dot me-2 gold-text"></i>Wave City, Sector 2, NH-24</li>
+          <li><i class="fa-solid fa-rupee-sign me-2 gold-text"></i>Starting ₹69 Lakhs Onwards</li>
+          <li><i class="fa-solid fa-layer-group me-2 gold-text"></i>LGF to 2nd Floor</li>
+          <li><i class="fa-solid fa-key me-2 gold-text"></i>Ready to Move | Registry Open</li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <h6 class="footer-heading">Contact Us</h6>
+        <div class="contact-box">
+          <a href="tel:+919999999999" class="contact-btn"><i class="fa-solid fa-phone"></i> +91 9999-999-999</a>
+          <a href="https://wa.me/919999999999" class="contact-btn wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp Now</a>
+          <button class="contact-btn enq" data-bs-toggle="modal" data-bs-target="#enquiryModal"><i class="fa-solid fa-envelope"></i> Enquire Online</button>
+        </div>
+      </div>
+    </div>
+    <hr class="footer-hr mt-4"/>
+    <div class="row align-items-center mt-3">
+      <div class="col-md-8">
+        <p class="footer-legal">*Prices subject to change without prior notice. All details are for informational purposes only. This is not a legal offer. Please verify all details with the developer before making any investment decisions.</p>
+      </div>
+      <div class="col-md-4 text-md-end">
+        <p class="footer-copy mb-1">© 2025 SKA Arcadia. All Rights Reserved.</p>
+        <p class="footer-copy" style="opacity: 0.7; font-size: 0.85em;">Developed by AAjneeti Connect Limited</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== FLOATING BUTTONS ===== -->
+<div class="floating-actions">
+  <a href="https://wa.me/919999999999" class="float-btn wa-btn" target="_blank" title="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="float-label">WhatsApp</span>
+  </a>
+  <a href="tel:+919999999999" class="float-btn call-btn" title="Call Now">
+    <i class="fa-solid fa-phone"></i>
+    <span class="float-label">Call Now</span>
+  </a>
+</div>
+
+<!-- ===== ENQUIRY MODAL ===== -->
+<div class="modal fade" id="enquiryModal" tabindex="-1" aria-labelledby="enquiryModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content modal-premium">
+      <div class="modal-header border-0 pb-0">
+        <div>
+          <h4 class="modal-title fw-bold" id="enquiryModalLabel">Book Your <span class="gold-text">Commercial Space</span></h4>
+          <p class="text-muted small mb-0">Our team will contact you within 24 hours</p>
+        </div>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body pt-3">
+        <div class="row g-4">
+          <div class="col-12">
+            <form id="enquiryForm" class="enquiry-form">
+              <div class="mb-3">
+                <label class="form-label">Full Name *</label>
+                <input type="text" class="form-control ska-input" placeholder="Enter your full name" required/>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Phone Number *</label>
+                <input type="tel" class="form-control ska-input" placeholder="+91 98XXX XXXXX" required/>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-control ska-input" placeholder="yourname@email.com"/>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Interested In</label>
+                <select class="form-select ska-input">
+                  <option value="">Select Floor/Space Type</option>
+                  <option>Ground Floor – Double Height Shop</option>
+                  <option>Lower Ground Floor – Retail</option>
+                  <option>1st Floor – Retail/F&B</option>
+                  <option>2nd Floor – Dining/Banquet</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Budget Range</label>
+                <select class="form-select ska-input">
+                  <option value="">Select your budget</option>
+                  <option>₹60 – 70 Lakhs</option>
+                  <option>₹70 – 90 Lakhs</option>
+                  <option>₹90 Lakhs – 1.25 Cr</option>
+                  <option>Above ₹1.25 Cr</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Message</label>
+                <textarea class="form-control ska-input" rows="2" placeholder="Any specific requirements or questions?"></textarea>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="consentCheck" checked/>
+                <label class="form-check-label small text-muted" for="consentCheck">
+                  I authorize SKA Group to contact me via phone, email or WhatsApp with project updates.
+                </label>
+              </div>
+              <button type="submit" class="btn btn-gold w-100 py-3 fw-semibold">
+                <i class="fa-solid fa-paper-plane me-2"></i>Submit Enquiry
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SUCCESS TOAST ===== -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index:9999">
+  <div id="successToast" class="toast align-items-center text-bg-success border-0" role="alert">
+    <div class="d-flex">
+      <div class="toast-body"><i class="fa-solid fa-check-circle me-2"></i>Enquiry submitted! Our team will call you shortly.</div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
