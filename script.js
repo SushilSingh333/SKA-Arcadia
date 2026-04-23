@@ -143,41 +143,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ── Counter Animation for Stats Bar ──────────────────────────
-  function animateCounter(el, target, suffix, duration = 1500) {
-    let start = 0;
-    const increment = target / (duration / 16);
-    const timer = setInterval(() => {
-      start += increment;
-      if (start >= target) {
-        el.textContent = target + suffix;
-        clearInterval(timer);
-      } else {
-        el.textContent = Math.floor(start) + suffix;
-      }
-    }, 16);
-  }
-
-  const statsBar = document.querySelector('.stats-bar');
-  if (statsBar) {
-    const statsObserver = new IntersectionObserver(entries => {
-      if (entries[0].isIntersecting) {
-        const statNums = statsBar.querySelectorAll('.stat-num');
-        const data = [
-          { target: 5, suffix: 'L+' },
-          { target: 722, suffix: '' },
-          { target: 2, suffix: ' Acres' },
-          { target: 15, suffix: '+' }
-        ];
-        statNums.forEach((el, i) => {
-          const d = data[i];
-          if (d) animateCounter(el, d.target, d.suffix);
-        });
-        statsObserver.disconnect();
-      }
-    }, { threshold: 0.5 });
-    statsObserver.observe(statsBar);
-  }
+  // ── Stats Bar: static values displayed via scroll-reveal ─────
+  // (Counter animation removed — values like ₹69L+, 40:60, 3 Yrs
+  //  are not plain numbers and are shown as static text.)
 
   // ── Parallax subtle effect on hero ───────────────────────────
   const heroSection = document.querySelector('.hero-section');

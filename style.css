@@ -515,11 +515,20 @@ img { max-width: 100%; }
 }
 
 .floor-featured {
-  background: linear-gradient(135deg, var(--dark), var(--dark2));
-  border-color: var(--gold);
+  background: linear-gradient(135deg, #111009, #1a1810);
+  border-color: rgba(201,168,76,0.4);
 }
-.floor-featured h5,
-.floor-featured p { color: rgba(255,255,255,0.85); }
+.floor-featured h5 { color: #fff; }
+.floor-featured p { color: rgba(255,255,255,0.6); }
+.floor-featured .floor-tag {
+  background: rgba(201,168,76,0.15);
+  color: var(--gold-light);
+  border: 1px solid rgba(201,168,76,0.3);
+}
+.floor-featured:hover {
+  border-color: var(--gold);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+}
 
 .floor-tag {
   display: inline-block;
@@ -1014,4 +1023,160 @@ img { max-width: 100%; }
 @media (max-width: 576px) {
   .hero-title { font-size: 3.2rem; }
   .pp-mid { border: none; border-top: 1px solid rgba(201,168,76,0.2); border-bottom: 1px solid rgba(201,168,76,0.2); }
+}
+
+/* ===== HERO PRICE PLAN HIGHLIGHT ===== */
+.price-plan-highlight {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+.pph-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: linear-gradient(135deg, rgba(201,168,76,0.22), rgba(201,168,76,0.12));
+  border: 1px solid rgba(201,168,76,0.55);
+  color: var(--gold-light);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 5px 13px;
+  border-radius: 50px;
+  letter-spacing: 0.4px;
+  backdrop-filter: blur(6px);
+  animation: fadeInLeft 0.7s ease 0.5s both;
+  white-space: nowrap;
+}
+.pph-chip i { color: var(--gold); font-size: 0.78rem; }
+.pph-sep {
+  color: rgba(201,168,76,0.45);
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1;
+}
+
+/* ===== BRAND TICKER MARQUEE ===== */
+.brand-ticker-wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.brand-ticker-track {
+  overflow: hidden;
+  width: 100%;
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.brand-ticker-inner {
+  display: flex;
+  gap: 14px;
+  width: max-content;
+}
+
+/* Row 1 slides LEFT */
+.ticker-left {
+  animation: tickerMoveLeft 28s linear infinite;
+}
+.ticker-left:hover { animation-play-state: paused; }
+
+/* Row 2 slides RIGHT */
+.ticker-right {
+  animation: tickerMoveRight 28s linear infinite;
+}
+.ticker-right:hover { animation-play-state: paused; }
+
+@keyframes tickerMoveLeft {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+@keyframes tickerMoveRight {
+  0%   { transform: translateX(-33.333%); }
+  100% { transform: translateX(0); }
+}
+
+/* Brand logo slide with image */
+.brand-logo-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 80px;
+  background: #fff;
+  border: 1px solid #e0d8c8;
+  border-radius: 10px;
+  padding: 4px 8px;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+  flex-shrink: 0;
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.brand-logo-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: var(--transition);
+  filter: brightness(0.95);
+}
+
+.brand-logo-slide:hover {
+  border-color: var(--gold);
+  box-shadow: 0 8px 32px rgba(201,168,76,0.2);
+  transform: translateY(-4px);
+}
+
+.brand-logo-slide:hover img {
+  filter: brightness(1);
+  transform: scale(1.05);
+}
+
+/* Legacy: Brand logo badge (colored initial circle) */
+.blc-badge {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+/* Legacy: Brand logo card */
+.brand-logo-card {
+  display: none;
+}
+.brand-logo-card i {
+  font-size: 1.8rem;
+  color: var(--gold);
+}
+.brand-logo-card span {
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.2;
+}
+.brand-logo-card:hover {
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  border-color: var(--gold);
+  color: #fff;
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-gold);
+}
+.brand-logo-card:hover .blc-badge {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  transform: scale(1.08);
 }
