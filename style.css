@@ -496,6 +496,8 @@ img { max-width: 100%; }
   height: 100%;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 .floor-card::before {
   content: '';
@@ -553,7 +555,14 @@ img { max-width: 100%; }
   margin-bottom: 14px;
 }
 .floor-card h5 { font-size: 1rem; color: var(--dark2); margin-bottom: 10px; }
-.floor-card p { color: var(--text-muted); font-size: 0.87rem; line-height: 1.7; }
+.floor-card p { 
+  color: var(--text-muted); 
+  font-size: 0.87rem; 
+  line-height: 1.7;
+  flex: 1;
+  margin-bottom: 16px;
+}
+.floor-card .btn { margin-top: auto; }
 .floor-price {
   font-family: var(--font-heading);
   font-size: 1.5rem;
